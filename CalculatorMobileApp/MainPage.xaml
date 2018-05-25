@@ -1,7 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CalculatorMobileApp" x:Class="CalculatorMobileApp.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CalculatorMobileApp" 
+             x:Class="CalculatorMobileApp.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="able" Grid.Row="0" Grid.Column="0"/>
+        <Label Text="baker" Grid.Row="0" Grid.Column="1"/>
+        <Label Text="charlie" Grid.Row="0" Grid.Column="2"/>
+        <Label Text="delta" Grid.Row="1" Grid.Column="0"/>
+        <Label Text="easy" Grid.Row="1" Grid.Column="1"/>
+        <Label Text="fox" Grid.Row="1" Grid.Column="2"/>
+        <Label Text="hotel" Grid.Row="2" Grid.Column="0"/>
+        <Label Text="india" Grid.Row="2" Grid.Column="1"/>
+        <Label Text="kilo" Grid.Row="2" Grid.Column="2"/>
+    </Grid>
 </ContentPage>
