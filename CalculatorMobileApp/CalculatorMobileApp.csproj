@@ -10,4 +10,11 @@
   <ItemGroup>
     <ProjectReference Include="..\CalculatorModel\CalculatorModel.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controller\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="controller\InputClassifiers\ClassifyAsClear.cs" />
+    <Compile Remove="controller\InputClassifiers\ClassifiyAsNumeral.cs" />
+  </ItemGroup>
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CalculatorMobileApp.controller;
 using Xamarin.Forms;
 
 namespace CalculatorMobileApp
@@ -10,106 +11,111 @@ namespace CalculatorMobileApp
     public partial class MainPage : ContentPage
     {
 		private CalculatorController controller = new CalculatorController();
+       
+		private String BuildLabelText(){
+			return controller.Operand1 + controller.Operation + controller.Operand2;	
+		}
 
 		void ClearClicked(object sender, System.EventArgs e)
 		{
-			throw new NotImplementedException("xxx");
+			controller.PushCharacter("C");
+			LabelResultado.Text = BuildLabelText();
 		}
 
 		void DivClicked(object sender, System.EventArgs e){
-			controller.AccumulateData("/");
-            LabelResultado.Text = controller.Data;
+			controller.PushCharacter("/");
+			LabelResultado.Text = BuildLabelText();
 		}
 
 		void MulClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("*");
-            LabelResultado.Text = controller.Data;
+			controller.PushCharacter("*");
+            LabelResultado.Text = BuildLabelText();
         }
 
 		void AddClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("+");
-            LabelResultado.Text = controller.Data;                
+			controller.PushCharacter("+");
+            LabelResultado.Text = BuildLabelText();                
         }
 
 		void SubClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("-");
-            LabelResultado.Text = controller.Data;
+			controller.PushCharacter("-");
+            LabelResultado.Text = BuildLabelText();
         }
 
 		void OneClicked(object sender, System.EventArgs e)
 		{
-			controller.AccumulateData("1");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter("1");
+			LabelResultado.Text = BuildLabelText();
         }
 
 		void TwoClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("2");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter("2");
+			LabelResultado.Text = BuildLabelText();
         }
 
 		void ThreeClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("3");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter("3");
+			LabelResultado.Text = BuildLabelText();
         }
 
 		void FourClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("4");
-			LabelResultado.Text = controller.Data;         
+			controller.PushCharacter("4");
+			LabelResultado.Text = BuildLabelText();         
         }
 
 		void FiveClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("5");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter("5");
+			LabelResultado.Text = BuildLabelText();
         }
 
 		void SixClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("6");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter("6");
+			LabelResultado.Text = BuildLabelText();
         }
 
 		void SevenClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("7");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter("7");
+			LabelResultado.Text = BuildLabelText();
         }
 
 		void EightClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("8");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter("8");
+			LabelResultado.Text = BuildLabelText();
         }
 
 		void NineClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("9");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter("9");
+			LabelResultado.Text = BuildLabelText();
         }
 
 		void ZeroClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("9");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter("0");
+			LabelResultado.Text = BuildLabelText();
         }
 
 		void PointClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData(".");
-			LabelResultado.Text = controller.Data;
+			controller.PushCharacter(".");
+			LabelResultado.Text = BuildLabelText();
             
         }
 
 		void EnterClicked(object sender, System.EventArgs e)
         {
-			controller.AccumulateData("=");
-            LabelResultado.Text = controller.Data;
+			controller.PushCharacter("=");
+            LabelResultado.Text = BuildLabelText();
         }
 
         public MainPage()
