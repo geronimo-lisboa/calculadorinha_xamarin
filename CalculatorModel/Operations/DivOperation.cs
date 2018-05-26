@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CalculatorModel
+namespace CalculatorModel.Operations
 {
 	public class DivOperation:Operation
     {
@@ -7,7 +7,7 @@ namespace CalculatorModel
 		{
 		}
 
-		public override float Execute(float a, float b)
+		protected override float Execute(float a, float b)
 		{
 			if (Math.Abs(b) > 0)
 				return a / b;

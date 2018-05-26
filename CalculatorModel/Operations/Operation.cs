@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CalculatorModel
+namespace CalculatorModel.Operations
 {
     public abstract class Operation
     {
@@ -32,7 +32,7 @@ namespace CalculatorModel
         /// <returns>Deve ser o resultado.</returns>
         /// <param name="a">A.</param>
         /// <param name="b">B.</param>
-		public abstract float Execute(float a, float b);
+		protected abstract float Execute(float a, float b);
         /// <summary>
         /// Construtor, onde A e B são definidos.
         /// </summary>

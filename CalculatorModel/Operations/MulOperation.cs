@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CalculatorModel
+namespace CalculatorModel.Operations
 {
 	public class MulOperation : Operation
 	{
@@ -7,7 +7,7 @@ namespace CalculatorModel
 		{
 		}
 
-		public override float Execute(float a, float b)
+		protected override float Execute(float a, float b)
 		{
 			return a * b;
 		}
