@@ -8,20 +8,44 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Label Text="able" Grid.Row="0" Grid.Column="0"/>
-        <Label Text="baker" Grid.Row="0" Grid.Column="1"/>
-        <Label Text="charlie" Grid.Row="0" Grid.Column="2"/>
-        <Label Text="delta" Grid.Row="1" Grid.Column="0"/>
-        <Label Text="easy" Grid.Row="1" Grid.Column="1"/>
-        <Label Text="fox" Grid.Row="1" Grid.Column="2"/>
-        <Label Text="hotel" Grid.Row="2" Grid.Column="0"/>
-        <Label Text="india" Grid.Row="2" Grid.Column="1"/>
-        <Label Text="kilo" Grid.Row="2" Grid.Column="2"/>
+        <!-- Onde o resultado é exibido -->
+        <StackLayout Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"
+                     Orientation="Horizontal">
+            <Label></Label>
+            <Label HorizontalOptions="FillAndExpand" 
+                   x:Name="LabelResultado"></Label>
+        </StackLayout>
+        <!-- os numeros e operações -->
+        <Button x:Name="BtnDiv" Text="/" Grid.Column="0" Grid.Row="1" Clicked="DivClicked"/>
+        <Button x:Name="BtnMul" Text="*" Grid.Column="1" Grid.Row="1" Clicked="MulClicked"/>
+        <Button x:Name="BtnSub" Text="-" Grid.Column="2" Grid.Row="1" Clicked="SubClicked"/>
+        <Button x:Name="BtnAdd" Text="+" Grid.Column="3" Grid.Row="1" Clicked="AddClicked"/>
+        
+        <Button x:Name="Btn7" Text="7" Grid.Column="0" Grid.Row="2" Clicked="SevenClicked"/>
+        <Button x:Name="Btn8" Text="8" Grid.Column="1" Grid.Row="2" Clicked="EightClicked"/>
+        <Button x:Name="Btn9" Text="9" Grid.Column="2" Grid.Row="2" Clicked="NineClicked"/>
+        <Button x:Name="BtnEnter" Text="=" Grid.Column="3" Grid.Row="2" Grid.RowSpan="3" Clicked="EnterClicked"/>
+        
+        <Button Text="4" Grid.Column="0" Grid.Row="3" Clicked="FourClicked"/>
+        <Button Text="5" Grid.Column="1" Grid.Row="3" Clicked="FiveClicked"/>
+        <Button Text="6" Grid.Column="2" Grid.Row="3" Clicked="SixClicked"/>
+        
+        <Button Text="1" Grid.Column="0" Grid.Row="4" Clicked="OneClicked"/>
+        <Button Text="2" Grid.Column="1" Grid.Row="4" Clicked="TwoClicked"/>
+        <Button Text="3" Grid.Column="2" Grid.Row="4" Clicked="ThreeClicked"/>
+        
+        <Button Text="0" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Clicked="ZeroClicked"/>
+        <Button Text="," Grid.Column="2" Grid.Row="5" Clicked="PointClicked"/>
+        <Button Text="C" Grid.Column="3" Grid.Row="5" Clicked="ClearClicked"/>
     </Grid>
 </ContentPage>
